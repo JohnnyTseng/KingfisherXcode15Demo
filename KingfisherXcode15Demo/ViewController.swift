@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let resource = ImageResource(downloadURL: URL(string: "https://www.google.com.tw")!)
+        KingfisherManager.shared.retrieveImage(with: resource, options: []) { [weak self] result in
+        }
+
     }
 
 
